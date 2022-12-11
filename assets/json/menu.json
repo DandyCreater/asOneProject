@@ -1,0 +1,27 @@
+{
+    "responseCode": "OK",
+    "OKContentMenu": {
+        "menu": [
+            {
+                "routes": "/regular-page",
+                "menuName": "Regular",
+                "imageUrl": "assets/images/icon_regular.jpg"
+            },
+            {
+                "routes": "/kargo-page",
+                "menuName": "Kargo",
+                "imageUrl": "assets/images/icon_kargo.png"
+            },
+            {
+                "routes": "/grosir-page",
+                "menuName": "Grosir",
+                "imageUrl": "assets/images/icon_grosir.png"
+            },
+            {
+                "routes": "/semua-page",
+                "menuName": "Semua",
+                "imageUrl": "assets/images/icon_semua.png"
+            }
+        ]
+    }
+}

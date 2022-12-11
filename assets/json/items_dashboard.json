@@ -1,0 +1,43 @@
+{
+    "responseCode": "OK",
+    "OKContentItemDashboard": {
+        "itemsDashboard": [
+            {
+                "itemsName": "ELFORMULA intensive peeling solution - ukuran 200 ml",
+                "actualPrice": "195000",
+                "disconPrice": "129000",
+                "productType": "Skincare",
+                "terkumpul": "8",
+                "totalOrang": "10",
+                "imageUrl": "assets/images/items_dashboard_1.png"
+            },
+            {
+                "itemsName": "AZA x DBL Varsity 2022 Series Baller ID (Gelang Rubber)",
+                "actualPrice": "7195000",
+                "disconPrice": "22000",
+                "productType": "Aksesoris",
+                "terkumpul": "13",
+                "totalOrang": "20",
+                "imageUrl": "assets/images/items_dashboard_2.png"
+            },
+            {
+                "itemsName": "Hydrapen Original Generasi 2 ",
+                "actualPrice": "1195000",
+                "disconPrice": "329000",
+                "productType": "Skincare",
+                "terkumpul": "1",
+                "totalOrang": "2",
+                "imageUrl": "assets/images/items_dashboard_3.png"
+            },
+            {
+                "itemsName": "Kaos NBA Lakers 23 Cotton 30's Premium",
+                "actualPrice": "195000",
+                "disconPrice": "59000",
+                "productType": "Pakaian",
+                "terkumpul": "2",
+                "totalOrang": "5",
+                "imageUrl": "assets/images/items_dashboard_4.png"
+            }
+        ]
+    }
+}

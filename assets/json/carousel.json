@@ -1,0 +1,16 @@
+{
+    "responseCode": "OK",
+    "OKContentCarousel": {
+        "carousel": [
+            {
+                "imageUrl": "assets/images/slide_1.png"
+            },
+            {
+                "imageUrl": "assets/images/slide_2.png"
+            },
+            {
+                "imageUrl": "assets/images/slide_1.png"
+            }
+        ]
+    }
+}
