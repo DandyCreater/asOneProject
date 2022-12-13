@@ -2,6 +2,7 @@ import 'dart:convert';
 
 import 'package:as_one/data/model/dashboard/carousel/carousel_response_model.dart';
 import 'package:as_one/data/model/dashboard/item-dashboard/item_dashboard_response_model.dart';
+import 'package:as_one/data/model/dashboard/item-order-detail/item_order_detail_response_model.dart';
 import 'package:as_one/data/model/dashboard/menu/menu_response_model.dart';
 import 'package:as_one/data/model/explore/item-explore/item_explore_response_model.dart';
 import 'package:flutter/services.dart';
@@ -12,6 +13,7 @@ abstract class LocalDataSource {
   Future itemDashboard();
 
   Future itemExplore();
+  Future itemOrderDetail();
 }
 
 class LocalDataSourceImpl implements LocalDataSource {
@@ -52,6 +54,17 @@ class LocalDataSourceImpl implements LocalDataSource {
     final decodeResponse = jsonDecode(response);
 
     var result = ItemExploreResponseModel.fromJson(decodeResponse);
+
+    return result;
+  }
+
+  @override
+  Future itemOrderDetail() async {
+    final response =
+        await rootBundle.loadString('assets/json/items_order_detail.json');
+    final decodeResponse = jsonDecode(response);
+
+    var result = ItemOrderDetailResponseModel.fromJson(decodeResponse);
 
     return result;
   }

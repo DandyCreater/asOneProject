@@ -1,6 +1,7 @@
 import 'package:as_one/app/routes/routes.dart';
 import 'package:as_one/presentation/bloc/dashboard/carousel/carousel_bloc.dart';
 import 'package:as_one/presentation/bloc/dashboard/item-dashboard/item_dashboard_bloc.dart';
+import 'package:as_one/presentation/bloc/dashboard/item-order-detail/item_order_detail_bloc.dart';
 import 'package:as_one/presentation/bloc/dashboard/menu/menu_bloc.dart';
 import 'package:as_one/presentation/bloc/explore/bloc/item_explore_bloc.dart';
 import 'package:as_one/presentation/screen/mainpage.dart';
@@ -19,6 +20,7 @@ class MyApp extends StatelessWidget {
     final menuBloc = sl<MenuBloc>();
     final itemDashboardBloc = sl<ItemDashboardBloc>();
     final itemExploreBloc = sl<ItemExploreBloc>();
+    final itemOrderDetailBloc = sl<ItemOrderDetailBloc>();
 
     return MultiBlocProvider(
       providers: [
@@ -26,7 +28,9 @@ class MyApp extends StatelessWidget {
         BlocProvider(create: (_) => menuBloc..add(FetchMenu())),
         BlocProvider(
             create: (_) => itemDashboardBloc..add(FetchItemDashboard())),
-        BlocProvider(create: (_) => itemExploreBloc..add(FetchItemExplore()))
+        BlocProvider(create: (_) => itemExploreBloc..add(FetchItemExplore())),
+        BlocProvider(
+            create: (_) => itemOrderDetailBloc..add(FetchItemOrderDetail()))
       ],
       child: const MaterialApp(
         debugShowCheckedModeBanner: false,

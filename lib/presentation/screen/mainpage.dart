@@ -51,6 +51,7 @@ class _MainPageState extends State<MainPage> {
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
                 InkWell(
+                  focusColor: ColorManager.whiteColor,
                   onTap: () => _onTapped(0),
                   child: Column(
                     mainAxisAlignment: MainAxisAlignment.center,
@@ -80,6 +81,7 @@ class _MainPageState extends State<MainPage> {
                   ),
                 ),
                 InkWell(
+                  focusColor: ColorManager.whiteColor,
                   onTap: () => _onTapped(1),
                   child: Column(
                     mainAxisAlignment: MainAxisAlignment.center,
@@ -125,6 +127,7 @@ class _MainPageState extends State<MainPage> {
                   ],
                 ),
                 InkWell(
+                  focusColor: ColorManager.whiteColor,
                   onTap: () => _onTapped(2),
                   child: Column(
                     mainAxisAlignment: MainAxisAlignment.center,
@@ -152,6 +155,7 @@ class _MainPageState extends State<MainPage> {
                   ),
                 ),
                 InkWell(
+                  focusColor: ColorManager.whiteColor,
                   onTap: () => _onTapped(4),
                   child: Column(
                     mainAxisAlignment: MainAxisAlignment.center,

@@ -1,0 +1,34 @@
+{
+    "responseCode": "OK",
+    "OKContentItemOrderDetail": {
+        "itemsOrderDetail": [
+            {
+                "itemsName": "Kaos NBA Lakers 23 Cotton 30's Premium",
+                "actualPrice": "195000",
+                "disconPrice": "59000",
+                "productType": "Fashion & Sport",
+                "terkumpul": "2",
+                "totalOrang": "5",
+                "imageUrl": "assets/images/items_dashboard_4.png"
+            },
+            {
+                "itemsName": "AZA x DBL Varsity 2022 Series Baller ID (Gelang Rubber)",
+                "actualPrice": "7195000",
+                "disconPrice": "22000",
+                "productType": "Fashion & Sport",
+                "terkumpul": "13",
+                "totalOrang": "20",
+                "imageUrl": "assets/images/items_dashboard_2.png"
+            },
+            {
+                "itemsName": "Baller ID (Gelang) DBL Position",
+                "actualPrice": "30000",
+                "disconPrice": "25000",
+                "productType": "Fashion & Sport",
+                "terkumpul": "5",
+                "totalOrang": "20",
+                "imageUrl": "assets/images/item_order_1.png"
+            }
+        ]
+    }
+}

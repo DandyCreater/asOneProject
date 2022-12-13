@@ -160,7 +160,7 @@ class _HomePageState extends State<HomePage> {
               height: 10,
             ),
             SizedBox(
-              height: height * 0.2,
+              height: height * 0.16,
               child: BlocBuilder<MenuBloc, MenuState>(
                 builder: (context, state) {
                   if (state is MenuSuccess) {
@@ -206,7 +206,7 @@ class _HomePageState extends State<HomePage> {
                                 ),
                               ),
                               const SizedBox(
-                                width: 15,
+                                width: 20,
                               )
                             ],
                           );
@@ -256,7 +256,6 @@ class _HomePageState extends State<HomePage> {
                 builder: (context, state) {
                   if (state is ItemDashboardSuccess) {
                     var items = state.value;
-
                     return ListView.builder(
                         padding: const EdgeInsets.only(left: 20),
                         scrollDirection: Axis.horizontal,
@@ -274,146 +273,165 @@ class _HomePageState extends State<HomePage> {
                             ),
                             child: Row(
                               children: [
-                                Column(
-                                  children: [
-                                    Container(
-                                      height: height * 0.2,
-                                      width: width * 0.35,
-                                      decoration: BoxDecoration(
-                                          color: ColorManager.whiteColor,
-                                          borderRadius: const BorderRadius.only(
-                                              topLeft: Radius.circular(10),
-                                              topRight: Radius.circular(10)),
-                                          image: DecorationImage(
-                                              image: AssetImage(
-                                                  items[index].imageUrl!),
-                                              fit: BoxFit.cover)),
-                                    ),
-                                    Container(
-                                      height: height * 0.2,
-                                      width: width * 0.35,
-                                      decoration: const BoxDecoration(
-                                          color: ColorManager.whiteColor,
-                                          borderRadius: BorderRadius.only(
-                                            bottomLeft: Radius.circular(10),
-                                            bottomRight: Radius.circular(10),
-                                          )),
-                                      child: Padding(
-                                        padding: const EdgeInsets.symmetric(
-                                            horizontal: 10, vertical: 10),
-                                        child: Column(
-                                          crossAxisAlignment:
-                                              CrossAxisAlignment.start,
-                                          children: [
-                                            Text(
-                                              items[index].itemsName!,
-                                              style: ThemeText()
-                                                  .regularText()
-                                                  .copyWith(fontSize: 10),
-                                            ),
-                                            const SizedBox(
-                                              height: 10,
-                                            ),
-                                            RichText(
-                                              text: TextSpan(children: [
-                                                TextSpan(
-                                                  text: NumberFormat.currency(
-                                                          symbol: "Rp.",
-                                                          decimalDigits: 0)
-                                                      .format(intActualPrice),
-                                                  style: ThemeText()
-                                                      .inActiveNavBarText()
-                                                      .copyWith(
-                                                          fontSize: 8,
-                                                          color: ColorManager
-                                                              .lineTextColor,
-                                                          decoration:
-                                                              TextDecoration
-                                                                  .lineThrough),
-                                                ),
-                                                TextSpan(
-                                                  text:
-                                                      ' ${NumberFormat.currency(symbol: "Rp.", decimalDigits: 0).format(intDisconPrice)}',
-                                                  style: ThemeText()
-                                                      .inActiveNavBarText()
-                                                      .copyWith(
-                                                          color: ColorManager
-                                                              .blackColor,
-                                                          fontSize: 10,
-                                                          fontWeight:
-                                                              FontWeight.w700),
-                                                ),
-                                              ]),
-                                            ),
-                                            const SizedBox(
-                                              height: 5,
-                                            ),
-                                            Text(
-                                              items[index].productType!,
-                                              style: ThemeText().regularText(),
-                                            ),
-                                            const SizedBox(
-                                              height: 10,
-                                            ),
-                                            Stack(
-                                              children: [
-                                                Container(
-                                                  width: width,
-                                                  height: 8,
-                                                  decoration: BoxDecoration(
-                                                      color: ColorManager
-                                                          .backgroundProgress,
-                                                      borderRadius:
-                                                          BorderRadius.circular(
-                                                              20)),
-                                                ),
-                                                Container(
-                                                  width: width * 0.2,
-                                                  height: 8,
-                                                  decoration: BoxDecoration(
-                                                      color: ColorManager
-                                                          .mainColor,
-                                                      borderRadius:
-                                                          BorderRadius.circular(
-                                                              20)),
-                                                ),
-                                              ],
-                                            ),
-                                            const SizedBox(
-                                              height: 7,
-                                            ),
-                                            RichText(
-                                              text: TextSpan(children: [
-                                                TextSpan(
-                                                  text: items[index].terkumpul,
-                                                  style: ThemeText()
-                                                      .inActiveNavBarText()
-                                                      .copyWith(
-                                                          fontSize: 12,
-                                                          color: ColorManager
-                                                              .mainColor,
-                                                          fontWeight:
-                                                              FontWeight.w700),
-                                                ),
-                                                TextSpan(
-                                                  text:
-                                                      ' dari ${items[index].totalOrang} orang',
-                                                  style: ThemeText()
-                                                      .inActiveNavBarText()
-                                                      .copyWith(
-                                                          color: ColorManager
-                                                              .blackColor,
-                                                          fontSize: 12,
-                                                          fontWeight:
-                                                              FontWeight.w700),
-                                                ),
-                                              ]),
-                                            ),
-                                          ],
-                                        ),
+                                Container(
+                                  height: height * 0.4,
+                                  width: width * 0.35,
+                                  decoration: BoxDecoration(boxShadow: [
+                                    BoxShadow(
+                                        color: Colors.black.withOpacity(0.1),
+                                        offset: const Offset(0, 2),
+                                        blurRadius: 10,
+                                        spreadRadius: 0)
+                                  ]),
+                                  child: Column(
+                                    children: [
+                                      Container(
+                                        height: height * 0.2,
+                                        width: width * 0.35,
+                                        decoration: BoxDecoration(
+                                            color: ColorManager.whiteColor,
+                                            borderRadius:
+                                                const BorderRadius.only(
+                                                    topLeft:
+                                                        Radius.circular(10),
+                                                    topRight:
+                                                        Radius.circular(10)),
+                                            image: DecorationImage(
+                                                image: AssetImage(
+                                                    items[index].imageUrl!),
+                                                fit: BoxFit.cover)),
                                       ),
-                                    )
-                                  ],
+                                      Container(
+                                        height: height * 0.2,
+                                        width: width * 0.35,
+                                        decoration: const BoxDecoration(
+                                            color: ColorManager.whiteColor,
+                                            borderRadius: BorderRadius.only(
+                                              bottomLeft: Radius.circular(10),
+                                              bottomRight: Radius.circular(10),
+                                            )),
+                                        child: Padding(
+                                          padding: const EdgeInsets.symmetric(
+                                              horizontal: 10, vertical: 10),
+                                          child: Column(
+                                            crossAxisAlignment:
+                                                CrossAxisAlignment.start,
+                                            children: [
+                                              Text(
+                                                items[index].itemsName!,
+                                                style: ThemeText()
+                                                    .regularText()
+                                                    .copyWith(fontSize: 10),
+                                              ),
+                                              const SizedBox(
+                                                height: 10,
+                                              ),
+                                              RichText(
+                                                text: TextSpan(children: [
+                                                  TextSpan(
+                                                    text: NumberFormat.currency(
+                                                            symbol: "Rp.",
+                                                            decimalDigits: 0)
+                                                        .format(intActualPrice),
+                                                    style: ThemeText()
+                                                        .inActiveNavBarText()
+                                                        .copyWith(
+                                                            fontSize: 8,
+                                                            color: ColorManager
+                                                                .lineTextColor,
+                                                            decoration:
+                                                                TextDecoration
+                                                                    .lineThrough),
+                                                  ),
+                                                  TextSpan(
+                                                    text:
+                                                        ' ${NumberFormat.currency(symbol: "Rp.", decimalDigits: 0).format(intDisconPrice)}',
+                                                    style: ThemeText()
+                                                        .inActiveNavBarText()
+                                                        .copyWith(
+                                                            color: ColorManager
+                                                                .blackColor,
+                                                            fontSize: 10,
+                                                            fontWeight:
+                                                                FontWeight
+                                                                    .w700),
+                                                  ),
+                                                ]),
+                                              ),
+                                              const SizedBox(
+                                                height: 5,
+                                              ),
+                                              Text(
+                                                items[index].productType!,
+                                                style:
+                                                    ThemeText().regularText(),
+                                              ),
+                                              const SizedBox(
+                                                height: 10,
+                                              ),
+                                              Stack(
+                                                children: [
+                                                  Container(
+                                                    width: width,
+                                                    height: 8,
+                                                    decoration: BoxDecoration(
+                                                        color: ColorManager
+                                                            .backgroundProgress,
+                                                        borderRadius:
+                                                            BorderRadius
+                                                                .circular(20)),
+                                                  ),
+                                                  Container(
+                                                    width: width * 0.2,
+                                                    height: 8,
+                                                    decoration: BoxDecoration(
+                                                        color: ColorManager
+                                                            .mainColor,
+                                                        borderRadius:
+                                                            BorderRadius
+                                                                .circular(20)),
+                                                  ),
+                                                ],
+                                              ),
+                                              const SizedBox(
+                                                height: 7,
+                                              ),
+                                              RichText(
+                                                text: TextSpan(children: [
+                                                  TextSpan(
+                                                    text:
+                                                        items[index].terkumpul,
+                                                    style: ThemeText()
+                                                        .inActiveNavBarText()
+                                                        .copyWith(
+                                                            fontSize: 12,
+                                                            color: ColorManager
+                                                                .mainColor,
+                                                            fontWeight:
+                                                                FontWeight
+                                                                    .w700),
+                                                  ),
+                                                  TextSpan(
+                                                    text:
+                                                        ' dari ${items[index].totalOrang} orang',
+                                                    style: ThemeText()
+                                                        .inActiveNavBarText()
+                                                        .copyWith(
+                                                            color: ColorManager
+                                                                .blackColor,
+                                                            fontSize: 12,
+                                                            fontWeight:
+                                                                FontWeight
+                                                                    .w700),
+                                                  ),
+                                                ]),
+                                              ),
+                                            ],
+                                          ),
+                                        ),
+                                      )
+                                    ],
+                                  ),
                                 ),
                                 const SizedBox(
                                   width: 20,

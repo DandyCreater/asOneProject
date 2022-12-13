@@ -10,4 +10,7 @@ class ColorManager {
   static const backgroundProgress = Color(0xffE5E5E5);
   static const filledTextField = Color(0xffF3F4FA);
   static const inactiveChip = Color(0xffF0F0F0);
+  static const storeColor = Color(0xff13929A);
+  static const chipColor = Color(0xffE5FDFF);
+  static const textChipColor = Color(0xff13929A);
 }
