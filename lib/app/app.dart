@@ -6,6 +6,7 @@ import 'package:as_one/presentation/bloc/dashboard/menu/menu_bloc.dart';
 import 'package:as_one/presentation/bloc/explore/bloc/item_explore_bloc.dart';
 import 'package:as_one/presentation/screen/mainpage.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
 import 'injection_container.dart';
@@ -32,9 +33,16 @@ class MyApp extends StatelessWidget {
         BlocProvider(
             create: (_) => itemOrderDetailBloc..add(FetchItemOrderDetail()))
       ],
-      child: const MaterialApp(
-        debugShowCheckedModeBanner: false,
-        home: MainPage(),
+      child: const AnnotatedRegion<SystemUiOverlayStyle>(
+        value: SystemUiOverlayStyle(
+          statusBarColor: Colors.white,
+          statusBarBrightness: Brightness.dark,
+          statusBarIconBrightness: Brightness.dark,
+        ),
+        child: MaterialApp(
+          debugShowCheckedModeBanner: false,
+          home: MainPage(),
+        ),
       ),
     );
   }

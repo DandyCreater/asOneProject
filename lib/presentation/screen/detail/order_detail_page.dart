@@ -36,6 +36,7 @@ class OrderDetailPage extends StatelessWidget {
       "assets/images/anggota_5.png",
     ];
     return Scaffold(
+      backgroundColor: ColorManager.whiteColor,
       body: SingleChildScrollView(
         physics: const BouncingScrollPhysics(),
         child: Column(
@@ -411,7 +412,7 @@ class OrderDetailPage extends StatelessWidget {
                             child: Row(
                               children: [
                                 Container(
-                                  height: height * 0.4,
+                                  height: height * 0.37,
                                   width: width * 0.35,
                                   decoration: BoxDecoration(boxShadow: [
                                     BoxShadow(
@@ -423,7 +424,7 @@ class OrderDetailPage extends StatelessWidget {
                                   child: Column(
                                     children: [
                                       Container(
-                                        height: height * 0.2,
+                                        height: height * 0.17,
                                         width: width * 0.35,
                                         decoration: BoxDecoration(
                                             color: ColorManager.whiteColor,

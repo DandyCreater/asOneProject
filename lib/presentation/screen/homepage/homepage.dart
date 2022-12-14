@@ -28,6 +28,7 @@ class _HomePageState extends State<HomePage> {
     var height = MediaQuery.of(context).size.height;
     var width = MediaQuery.of(context).size.width;
     return Scaffold(
+      backgroundColor: ColorManager.whiteColor,
       body: SingleChildScrollView(
         physics: const BouncingScrollPhysics(),
         child: Column(
@@ -103,7 +104,7 @@ class _HomePageState extends State<HomePage> {
                               return Container(
                                   width: double.infinity,
                                   margin: const EdgeInsets.only(
-                                    right: 20,
+                                    right: 5,
                                   ),
                                   decoration: BoxDecoration(
                                       borderRadius: BorderRadius.circular(15),
@@ -166,12 +167,13 @@ class _HomePageState extends State<HomePage> {
                   if (state is MenuSuccess) {
                     var items = state.value;
                     return ListView.builder(
-                        padding: const EdgeInsets.only(left: 20),
+                        padding: const EdgeInsets.only(left: 20, right: 20),
                         scrollDirection: Axis.horizontal,
                         physics: const BouncingScrollPhysics(),
                         itemCount: items!.length,
                         itemBuilder: ((context, index) {
                           return Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
                             children: [
                               InkWell(
                                 onTap: () {},
@@ -274,7 +276,7 @@ class _HomePageState extends State<HomePage> {
                             child: Row(
                               children: [
                                 Container(
-                                  height: height * 0.4,
+                                  height: height * 0.37,
                                   width: width * 0.35,
                                   decoration: BoxDecoration(boxShadow: [
                                     BoxShadow(
@@ -286,7 +288,7 @@ class _HomePageState extends State<HomePage> {
                                   child: Column(
                                     children: [
                                       Container(
-                                        height: height * 0.2,
+                                        height: height * 0.17,
                                         width: width * 0.35,
                                         decoration: BoxDecoration(
                                             color: ColorManager.whiteColor,
